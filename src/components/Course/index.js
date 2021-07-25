@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import * as s from './styled';
+import { createCommaList } from 'typescript';
 
 
 export default function Course() {
@@ -24,7 +25,14 @@ export default function Course() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const data = fields;
+        let data = fields;
+
+        // if(localStorage.getItem('data')) {
+        //     let temp = JSON.parse(localStorage.getItem('data'));
+        //     data = [fields, temp];
+        // } else {
+        //     data = fields;
+        // }
 
         localStorage.setItem('data', JSON.stringify(data));
         setFields(initialState);

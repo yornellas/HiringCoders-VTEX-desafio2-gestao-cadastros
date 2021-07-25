@@ -3,7 +3,6 @@ import { Link, useHistory } from 'react-router-dom';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import * as s from './styled';
-import { createCommaList } from 'typescript';
 
 
 export default function Course() {
